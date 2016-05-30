@@ -40,7 +40,8 @@ void Operacao::leitura()
 	{
 		valor2 = 0.0;
 		cout << "Digite o segundo valor: ";
-		char svalor2[30];
+		char svalor2[30],limparBuffer[2];
+		gets(limparBuffer);
 		gets(svalor2); 
 		valor2 = atof(svalor2);
 		if (valor2==NULL)
