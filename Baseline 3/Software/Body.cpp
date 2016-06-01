@@ -1,7 +1,5 @@
 #include "Classes.h"
-#include <string>
 #include <stdlib.h>
-
 Operacao::Operacao()
 {
 	leitura();
@@ -15,9 +13,9 @@ void Operacao::leitura()
 		cout << "Digite o primeiro valor: ";
 		char svalor1[30];
 		gets(svalor1); 
-		valor1 = atof(svalor1);
+		valor1 = strtod(svalor1);
 		if (valor1==NULL)
-			cout << "Primeiro valor não aceito. Digite um valor válido.\n";
+			cout << "Primeiro valor não aceito. Por favor, ";
 		else
 			break;
 	}while(1);
@@ -30,10 +28,7 @@ void Operacao::leitura()
 		if((operador =='+') || (operador =='-') || (operador =='*') || (operador =='/') || (operador =='^'))
 			break;
 		else
-		{
-			cout<<"Não foi digitado uma operação válida. Por favor, escolha uma entre (+ - * / ^): ";
-			cin >> operador;
-		}
+			cout<<"Não foi digitado uma operação válida. Por favor, ";
 	}while(1);
 	
 	do
@@ -43,9 +38,9 @@ void Operacao::leitura()
 		char svalor2[30],limparBuffer[2];
 		gets(limparBuffer);
 		gets(svalor2); 
-		valor2 = atof(svalor2);
+		valor2 = strtod(svalor2);
 		if (valor2==NULL)
-			cout << "Segundo valor não aceito. Digite um valor válido.\n";
+			cout << "Segundo valor não aceito. Por favor, ";
 		else
 			break;
 	}while(1);
@@ -61,32 +56,6 @@ void Operacao::leitura()
 	else if (operador == '^')
 		potenciacao();
 }
-
-/*void Operacao::leitura()
-{	
-	cout << "Digite o primeiro valor: ";
-	cin >> valor1;
-	cout << "Digite a operação: ";
-	cin >> operador;
-	cout << "Digite o segundo valor: ";
-	cin >> valor2;
-	
-		if (operador == '+')
-			soma();
-		else if (operador == '-')
-			subtracao();
-		else if (operador == '*')
-			multiplicacao();
-		else if (operador == '/')
-			divisao();
-		else if (operador == '^')
-			potenciacao();	
-		else
-		{
-			cout<<"Não foi digitado uma operação válida. Por favor, escolha uma entre (+ - * / ^): ";
-			cin >> operador;
-		}	
-}*/
 
 void Operacao::soma()
 {

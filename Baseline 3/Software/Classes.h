@@ -1,11 +1,9 @@
 #include <stdio.h>
-#include <tchar.h>
 #include <iostream>
 #include <string>
+#include <stdlib.h>
 #include <locale.h>
 #include <math.h>
-#include <stdlib.h> 
-#include <string>
 #pragma once
 
 using namespace std;
@@ -13,7 +11,7 @@ using namespace std;
 class Operacao
 {
 private:
-	float valor1, valor2, resultado = 0.0;
+	double valor1, valor2, resultado = 0.0;
 	char operador;
 public:
 	Operacao();
