@@ -2,7 +2,7 @@
 
 int main()
 {
-	setlocale(LC_ALL, "Portuguese");
+	setlocale(LC_ALL, "");
 	Operacao op1;
   	return 0;
 }
