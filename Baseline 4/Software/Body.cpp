@@ -88,7 +88,7 @@ void Operacao::potenciacao()
 	}
 	if (((valor1 < 0) || (valor2 < 0)) && (operador=='^'))
 	{
-		cout <<"Não é aceito números negativos na potenciação.\n";
+		cout <<"Nao é aceito números negativos na potenciaçao.\n";
 		erroPot=1;
 	}
 	if (valor2 > 10 && operador=='^')
@@ -102,5 +102,4 @@ void Operacao::exibicao()
 {
 	if (erroPot != 1)
 		cout << "\n" << valor1 <<" " << operador <<" "<< valor2 <<" = "<< resultado << endl;
-	cin.ignore();
 }
